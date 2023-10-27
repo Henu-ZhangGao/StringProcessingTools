@@ -1,0 +1,8 @@
+#ifndef _GLIBCXX_CXX_ADDTION_CONFIG
+#define _GLIBCXX_CXX_ADDTION_CONFIG 1
+
+#define _BEGIN_NAMESPACE
+#define _END_NAMESPACE
+#define _TARGET_INPUT
+
+#endif
