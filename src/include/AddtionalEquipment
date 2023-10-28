@@ -1,0 +1,19 @@
+#ifndef _DEFINE_ADDTIONALEQUIPMENT_CLASS
+#define _DEFINE_ADDTIONALEQUIPMENT_CLASS 1
+
+#include <IO>
+
+namespace _IO_SYMBOL
+{
+    class AddtionalEquipment : public IO
+    {
+    public:
+        AddtionalEquipment(__UINT16_TYPE__ length, __UINT16_TYPE__ length_other);
+        ~AddtionalEquipment();
+        __int32 getMAX();
+        __UINT16_TYPE__ *getLength(char *);
+    };
+
+}
+
+#endif

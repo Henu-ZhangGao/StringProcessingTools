@@ -12,13 +12,12 @@
 #include <test>
 #include <string>
 
-using _IO_SYMBOL::AddtionalEquipment;
+using _IO_SYMBOL::addtionalEquipment;
 using std::cout;
 using std::endl;
 
 int main(int args, char **argv)
 {
-    AddtionalEquipment addtionalEquipment;
     __UINT16_TYPE__ *temp;
     for (__int32 i = 1; i < args; i++)
     {

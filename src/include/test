@@ -3,59 +3,13 @@
 
 #pragma GCC system_header
 
-#include "AddtionalConfig.h"
+#include <AddtionalConfig.h>
+#include <AddtionalEquipmentImplement>
 
 namespace _IO_SYMBOL
 {
     _BEGIN_NAMESPACE
-    class AddtionalEquipment
-    {
-    public:
-        AddtionalEquipment();
-        ~AddtionalEquipment();
-        __int32 getMAX();
-        __UINT16_TYPE__ *getLength(char *);
-
-    private:
-        bool _SIGNAL;
-        __UINT16_TYPE__ *returnSet;
-        __UINT16_TYPE__ length;
-        __UINT16_TYPE__ length_alphabet;
-        __UINT16_TYPE__ length_other;
-
-        int MAX = INT_MAX;
-    };
-    AddtionalEquipment::AddtionalEquipment() : length(0), length_other(0)
-    {
-    }
-    AddtionalEquipment::~AddtionalEquipment()
-    {
-    }
-    __int32 AddtionalEquipment::getMAX()
-    {
-        return this->MAX;
-    }
-    _TARGET_INPUT
-    __UINT16_TYPE__ *AddtionalEquipment::getLength(char *target)
-    {
-        if (target[0] == '\0')
-        {
-            return 0;
-        }
-        for (int i = 0; target[i] != '\0'; i++, this->length = i)
-        {
-            if (target[i] > 127 || target[i] < 0)
-            {
-                this->length_other++;
-                i++;
-            }
-        }
-        this->length_alphabet = this->length - this->length_other * 2;
-        this->returnSet = new unsigned short[2];
-        this->returnSet[0] = this->length_alphabet;
-        this->returnSet[1] = this->length_other;
-        return this->returnSet;
-    }
+    extern AddtionalEquipment addtionalEquipment(0,0);
     _END_NAMESPACE
 }
 
