@@ -1,0 +1,21 @@
+#ifndef _DEFINE_BASED_CLASS
+#define _DEFINE_BASED_CLASS 1
+
+namespace _IO_SYMBOL
+{
+    class IO
+    {
+    public:
+        virtual __int32 getMAX() = 0;
+        virtual __UINT16_TYPE__ *getLength(char *) = 0;
+
+    protected:
+        bool _SIGNAL;
+        __UINT16_TYPE__ *returnSet;
+        __UINT16_TYPE__ length;
+        __UINT16_TYPE__ length_alphabet;
+        __UINT16_TYPE__ length_other;
+        int MAX = INT_MAX;
+    };
+}
+#endif
